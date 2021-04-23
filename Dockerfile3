@@ -1,0 +1,11 @@
+# syntax = docker/dockerfile:1.2
+FROM jupyter/tensorflow-notebook:016833b15ceb
+
+WORKDIR /app
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+WORKDIR /home/jovyan
+
+
+
+
